@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bankist</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <button class="btn-signup">Sign up!</button>
+      <img src="logo.png" height="50px" width="50px" />
+      <form class="login">
+        <input class="username" type="text" placeholder="Username" required />
+        <input class="pin" type="password" placeholder="Pin" required />
+        <button class="signin">&rarr;</button>
+      </form>
+    </div>
+    <div class="signup-page">
+      <form>
+        <h1>Sign up</h1>
+        <input class="suser" type="text" placeholder="Username" required />
+        <input
+          class="spassword"
+          type="password"
+          placeholder="Pin"
+          required
+        /><br />
+        <input class="semail" type="email" placeholder="Email" required /><br />
+        <button class="signup">&rarr;</button>
+      </form>
+    </div>
+
+    <!--main section-->
+
+    <div class="main">
+      <div class="balance">
+        <div>
+          <p class="balanceLabel">Current Balance</p>
+          <p class="dateLabel">As of <span class="date">11/8/2021</span></p>
+        </div>
+        <p class="amount">1200$</p>
+      </div>
+      <div class="application-section">
+        <!--transactions-->
+
+        <div class="transactions">
+          <div class="transaction-rows">
+            <div class="trans-row">
+              <div class="trans-type deposit">2 deposit</div>
+              <div class="trans-date">3 days ago</div>
+              <div class="trans-value">4 000$</div>
+            </div>
+            <div class="trans-row">
+              <div class="trans-type withdrawal">1 withdrawal</div>
+              <div class="trans-date">24/01/2037</div>
+              <div class="trans-value">-378$</div>
+            </div>
+          </div>
+
+          <!--summary section -->
+
+          <div class="summary">
+            <p class="summary-label">In</p>
+            <p class="summary-value svalue-in">0000$</p>
+            <p class="summary-label">Out</p>
+            <p class="summary-value svalue-out">0000$</p>
+            <p class="summary-label">Interest</p>
+            <p class="summary-value svalue-interest">0000$</p>
+            <button class="btn-sort">&downarrow; SORT</button>
+          </div>
+        </div>
+        <!--operations-->
+        <div class="operations">
+          <!--Tranfer card-->
+
+          <div class="operation card-transfer">
+            <h2>Transfer money</h2>
+            <form class="cards-form form-transfer" action="">
+              <input
+                type="text"
+                placeholder="Tansfer to"
+                class="form-input input-to"
+                required
+              />
+              <input
+                type="number"
+                placeholder="Amount"
+                class="form-input input-amount"
+                required
+              />
+              <button class="op-btn btn-transfer">&rarr;</button>
+            </form>
+          </div>
+
+          <!--Request loan card-->
+
+          <div class="operation card-loan">
+            <h2>Request loan</h2>
+            <form class="cards-form form-loan">
+              <input
+                type="number"
+                class="form-input input-loan-amount"
+                placeholder="amount"
+                required
+              />
+              <button type="submit" class="op-btn btn-loan">&rarr;</button>
+            </form>
+          </div>
+
+          <!--close account card-->
+
+          <div class="operation card-close">
+            <h2>Close account</h2>
+            <form class="cards-form form-close">
+              <input
+                type="text"
+                placeholder="confirm userid"
+                class="form-input input-user"
+                required
+              />
+              <input
+                type="password"
+                maxlength="6"
+                placeholder="confirm pin"
+                class="form-input input-pin"
+                required
+              />
+              <button class="op-btn btn-close">&rarr;</button>
+            </form>
+          </div>
+
+          <p class="logout-timer">
+            You will be logged out in <span class="timer">05:00</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
